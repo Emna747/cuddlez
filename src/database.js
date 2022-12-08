@@ -1,3 +1,4 @@
+
 const database = [
   { id: "1230", productName: "Wooden Dinosaurs Set", price: 36.99 },
   { id: "4560", productName: "Wooden Kitchen Set", price: 42.89 },
