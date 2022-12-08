@@ -1,5 +1,10 @@
 import React from "react";
+import Clothes from "./clothes";
+import Furniture from "./furniture";
+import Learning from "./learning";
+import Toys from "./toys";
 import database from "../database";
+import BedroomBabyIcon from "@mui/icons-material/BedroomBaby";
 import {
   Typography,
   AppBar,
@@ -10,6 +15,7 @@ import {
   Card,
   CardActions,
   CardContent,
+  cardMedia,
   Grid,
 } from "@material-ui/core";
 
@@ -18,8 +24,23 @@ function App() {
   const classes = useStyles();
   return (
     <div>
-      {" "}
-      <h1>tere tere Emna</h1> <p>you are amazing</p>
+      <CssBaseline />{" "}
+      <AppBar position="relative">
+        <Toolbar>
+          <BedroomBabyIcon />
+          <Typography variant="h5">
+            tere tere Emna just so u know, you are amazing
+          </Typography>
+        </Toolbar>
+      </AppBar>
+      <main>
+      <Container className={classes.container}>
+<Clothes />
+<Furniture />
+<Learning />
+<Toys />
+      </Container>
+      </main>
     </div>
   );
 }

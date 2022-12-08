@@ -10,6 +10,7 @@ const useStyles = makeStyles((theme) => ({
   },
   icon: {
     marginRight: "20px",
+    color: "green",
   },
   icons: {
     marginRight: "9px",
@@ -30,6 +31,5 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.background.paper,
     padding: "5px 0",
   },
-
 }));
 export default useStyles;
