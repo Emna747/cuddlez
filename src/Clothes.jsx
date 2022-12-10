@@ -1,5 +1,4 @@
 import React from "react";
-//import database from "../database";
 import {
   Typography,
   CssBaseline,
@@ -7,7 +6,7 @@ import {
   ButtonGroup,
   Card,
   CardContent,
-  cardMedia,
+  CardMedia,
   Grid,
 } from "@material-ui/core";
 import useStyles from "./styles";
@@ -50,7 +49,12 @@ function Clothes() {
               <Card className={classes.card}>
                 {" "}
                 <CardContent className={classes.cardContent}>
-                  <cardMedia image="../photos/book1.jpeg" />
+                  <CardMedia
+                    component="img"
+                    height="140"
+                    image="../photos/book1.jpeg"
+                    alt="its a book"
+                  />
                   <Typography gutterBottom variant="h4">
                     {" "}
                     <h2 className={classes.producttitle}>{card.productName}</h2>

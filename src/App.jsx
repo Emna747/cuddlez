@@ -1,8 +1,8 @@
 import React from "react";
-import Clothes from "./clothes";
-import Furniture from "./furniture";
-import Learning from "./learning";
-import Toys from "./toys";
+import Clothes from "./Clothes";
+import Furniture from "./Furniture";
+import Learning from "./Learning";
+import Toys from "./Toys";
 import ButtonBases from "./ButtonBases";
 import BedroomBabyIcon from "@mui/icons-material/BedroomBaby";
 import {
@@ -45,10 +45,12 @@ function App() {
             >
               tere tere Emna just so u know, you are amazing and this is where
               the website decsription should be
-            </Typography>
-            <div>
-              <ButtonBases />
-            </div>
+            </Typography>{" "}
+          </Container>
+          <Container>
+            <ButtonBases />
+          </Container>
+          <Container>
             <Clothes />
             <Furniture />
 
