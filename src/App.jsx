@@ -3,6 +3,7 @@ import Clothes from "./Clothes";
 import Furniture from "./Furniture";
 import Learning from "./Learning";
 import Toys from "./Toys";
+
 import ButtonBases from "./ButtonBases";
 import BedroomBabyIcon from "@mui/icons-material/BedroomBaby";
 import {
@@ -11,7 +12,7 @@ import {
   CssBaseline,
   Toolbar,
   Container,
-} from "@material-ui/core";
+} from "@mui/material";
 
 import useStyles from "./styles";
 
@@ -23,7 +24,7 @@ function App() {
       <AppBar position="relative">
         <Toolbar>
           <BedroomBabyIcon />
-          <Typography variant="h3">Cuddlez Store</Typography>
+          <Typography variant="h3">Cuddlez </Typography>
         </Toolbar>
       </AppBar>
       <main>
@@ -35,7 +36,7 @@ function App() {
               color="textPrimary"
               gutterBottom
             >
-              Cuddlez
+              Cuddlez Store
             </Typography>
             <Typography
               variant="h5"
@@ -43,19 +44,53 @@ function App() {
               color="textSecondary"
               paragraph
             >
-              tere tere Emna just so u know, you are amazing and this is where
-              the website decsription should be
+              Only Premium Products For Your Little Ones
             </Typography>{" "}
           </Container>
           <Container>
             <ButtonBases />
           </Container>
           <Container>
-            <Clothes />
-            <Furniture />
-
+            <Typography
+              variant="h4"
+              align="center"
+              color="textPrimary"
+              paragraph
+            >
+              {" "}
+              Learning is Key
+            </Typography>
             <Learning />
+            <Typography
+              variant="h4"
+              align="center"
+              color="textPrimary"
+              paragraph
+            >
+              {" "}
+              Have a stylish room baby
+            </Typography>
+            <Furniture />
+            <Typography
+              variant="h4"
+              align="center"
+              color="textPrimary"
+              paragraph
+            >
+              {" "}
+              Clothes for the bambinis
+            </Typography>
+            <Clothes />
 
+            <Typography
+              variant="h4"
+              align="center"
+              color="textPrimary"
+              paragraph
+            >
+              {" "}
+              Play and Have fun my love
+            </Typography>
             <Toys />
           </Container>
         </div>

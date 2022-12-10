@@ -6,24 +6,24 @@ import Typography from "@mui/material/Typography";
 
 const images = [
   {
-    url: "/static/images/buttons/breakfast.jpg",
-    title: "Breakfast",
-    width: "40%",
+    url: "https://images.pexels.com/photos/1741230/pexels-photo-1741230.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    title: "Learn",
+    width: "25%",
   },
   {
-    url: "/static/images/buttons/burgers.jpg",
-    title: "Burgers",
-    width: "30%",
+    url: "https://images.pexels.com/photos/272056/pexels-photo-272056.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    title: "Design",
+    width: "25%",
   },
   {
-    url: "/static/images/buttons/camera.jpg",
-    title: "Camera",
-    width: "30%",
+    url: "https://images.pexels.com/photos/3771605/pexels-photo-3771605.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    title: "Fashion",
+    width: "25%",
   },
   {
-    url: "/static/images/buttons/camera.jpg",
-    title: "Camera",
-    width: "30%",
+    url: "https://images.pexels.com/photos/6692931/pexels-photo-6692931.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    title: "Play",
+    width: "25%",
   },
 ];
 
@@ -83,7 +83,7 @@ const ImageBackdrop = styled("span")(({ theme }) => ({
 
 const ImageMarked = styled("span")(({ theme }) => ({
   height: 3,
-  width: 18,
+  width: 15,
   backgroundColor: theme.palette.common.white,
   position: "absolute",
   bottom: -2,
