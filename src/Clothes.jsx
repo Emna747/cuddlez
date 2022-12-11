@@ -1,5 +1,6 @@
 import React from "react";
-
+import FavoriteTwoToneIcon from "@mui/icons-material/FavoriteTwoTone";
+import EuroIcon from "@mui/icons-material/Euro";
 import {
   Typography,
   CssBaseline,
@@ -16,15 +17,13 @@ const database = [
     id: "3233",
     productName: "Red Dress",
     price: 50.99,
-
-    src: "photos/clothes1.jpeg",
   },
   {
     id: "3435",
     productName: "Colors Pattern Dress",
     price: 64.99,
-    src: "photos/clothes2.jpeg",
   },
+
   {
     id: "3637",
     productName: "Boy Blue Set",
@@ -166,35 +165,35 @@ function Clothes() {
       <CssBaseline />{" "}
       {database.map((card) => {
         return (
-          <Grid
-            container
-            spacing={2}
-            justifyContent="center"
-            className={classes.cardGrid}
-          >
+          <Grid container spacing={2}>
             <Grid item key={card.id} xs={12} sm={6} md={4}>
               <Card className={classes.card}>
                 {" "}
                 <CardContent className={classes.cardContent}>
                   <CardMedia
-                    className={classes.cardMedia}
                     component="img"
                     height="140"
-                    image=""
+                    image="../photos/book1.jpeg"
                     alt="its a book"
                   />
-                  <Typography gutterBottom variant="h4">
+                  <Typography
+                    gutterBottom
+                    variant="h6"
+                    className={classes.productdetails}
+                  >
                     {" "}
-                    <h2 className={classes.producttitle}>{card.productName}</h2>
-                    <h4 className={classes.jobdetails}>
-                      price in GBP is {card.price} and {card.src}
-                    </h4>
+                    <h6 className={classes.producttitle}>{card.productName}</h6>
+                    <h6 className={classes.productprice}>
+                      Price {card.price} <EuroIcon fontSize="sx" />
+                    </h6>
                   </Typography>
+                  <ButtonGroup variant="text" aria-label="text button group"  className={classes.buttons}>
+                    <Button>Add to Cart</Button>
+                    <Button>
+                      Save <FavoriteTwoToneIcon color="success" />
+                    </Button>
+                  </ButtonGroup>
                 </CardContent>
-                <ButtonGroup variant="text" aria-label="text button group">
-                  <Button>Add to Cart</Button>
-                  <Button>Save</Button>
-                </ButtonGroup>
               </Card>
             </Grid>
           </Grid>

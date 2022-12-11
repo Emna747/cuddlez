@@ -10,7 +10,8 @@ import {
   Grid,
 } from "@material-ui/core";
 import useStyles from "./styles";
-
+import FavoriteTwoToneIcon from "@mui/icons-material/FavoriteTwoTone";
+import EuroIcon from "@mui/icons-material/Euro";
 const database = [
   { id: "8081", productName: "Baby and Toddler Crib", price: 300 },
   { id: "8283", productName: "Baby Wood Crib ", price: 289 },
@@ -35,7 +36,7 @@ function Furniture() {
       <CssBaseline />{" "}
       {database.map((card) => {
         return (
-          <Grid container spacing={2} justify="center">
+          <Grid container spacing={2}>
             <Grid item key={card.id} xs={12} sm={6} md={4}>
               <Card className={classes.card}>
                 {" "}
@@ -46,18 +47,20 @@ function Furniture() {
                     image="../photos/book1.jpeg"
                     alt="its a book"
                   />
-                  <Typography gutterBottom variant="h4">
+                  <Typography gutterBottom variant="h6">
                     {" "}
-                    <h2 className={classes.producttitle}>{card.productName}</h2>
-                    <h4 className={classes.jobdetails}>
-                      price in GBP is {card.price}
-                    </h4>
+                    <h6 className={classes.producttitle}>{card.productName}</h6>
+                    <h6 className={classes.jobdetails}>
+                      Price {card.price} <EuroIcon fontSize="sx" />
+                    </h6>
                   </Typography>
+                  <ButtonGroup variant="text" aria-label="text button group">
+                    <Button>Add to Cart</Button>
+                    <Button>
+                      Save <FavoriteTwoToneIcon color="success" />
+                    </Button>
+                  </ButtonGroup>
                 </CardContent>
-                <ButtonGroup variant="text" aria-label="text button group">
-                  <Button>Add to Cart</Button>
-                  <Button>Save</Button>
-                </ButtonGroup>
               </Card>
             </Grid>
           </Grid>

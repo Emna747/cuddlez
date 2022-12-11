@@ -6,10 +6,12 @@ import {
   Button,
   ButtonGroup,
   Card,
+  Grid,
   CardContent,
   CardMedia,
-  Grid,
 } from "@material-ui/core";
+import FavoriteTwoToneIcon from "@mui/icons-material/FavoriteTwoTone";
+import EuroIcon from "@mui/icons-material/Euro";
 import useStyles from "./styles";
 const database = [
   { id: "1010", productName: "Fruits and Vegetables Book", price: 6.99 },
@@ -35,8 +37,8 @@ function Learning() {
       <CssBaseline />{" "}
       {database.map((card) => {
         return (
-          <Grid container spacing={2} justify="center">
-            <Grid item key={card.id} xs={12} sm={6} md={4}>
+          <Grid container spacing={2}>
+            <Grid item key={card.id} xs={8} sm={6} md={4}>
               <Card className={classes.card}>
                 {" "}
                 <CardContent className={classes.cardContent}>
@@ -46,18 +48,20 @@ function Learning() {
                     image="../photos/book1.jpeg"
                     alt="its a book"
                   />
-                  <Typography gutterBottom variant="h4">
+                  <Typography gutterBottom variant="h6">
                     {" "}
-                    <h2 className={classes.producttitle}>{card.productName}</h2>
-                    <h4 className={classes.jobdetails}>
-                      price in GBP is {card.price}
-                    </h4>
+                    <h5 className={classes.producttitle}>{card.productName}</h5>
+                    <h6>
+                      Price {card.price} <EuroIcon fontSize="sx" />
+                    </h6>
                   </Typography>
+                  <ButtonGroup variant="text" aria-label="text button group">
+                    <Button>Add to Cart</Button>
+                    <Button>
+                      Save <FavoriteTwoToneIcon color="success" />
+                    </Button>
+                  </ButtonGroup>
                 </CardContent>
-                <ButtonGroup variant="text" aria-label="text button group">
-                  <Button>Add to Cart</Button>
-                  <Button>Save</Button>
-                </ButtonGroup>
               </Card>
             </Grid>
           </Grid>

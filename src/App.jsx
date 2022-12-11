@@ -22,7 +22,7 @@ function App() {
   return (
     <div>
       <CssBaseline />{" "}
-      <AppBar position="fixed">
+      <AppBar position="relative">
         <Toolbar>
           <BedroomBabyIcon className={classes.icontop} />
           <Typography variant="h5">Cuddlez </Typography>
@@ -36,8 +36,8 @@ function App() {
         </Toolbar>
       </AppBar>
       <main>
-        <div>
-          <Container maxWidth="sm" className={classes.container}>
+        <div className={classes.container}>
+          <Container maxWidth="lg">
             <Typography
               variant="h1"
               align="center"
@@ -55,53 +55,54 @@ function App() {
               Only Premium Products For Your Little Ones
             </Typography>{" "}
           </Container>
-          <Container className={classes.container}>
-            <ButtonBases />
-          </Container>
-          <Container className={classes.container}>
-            <Typography
-              variant="h4"
-              align="center"
-              color="textPrimary"
-              paragraph
-            >
-              {" "}
-              Learning is Key
-            </Typography>
-            <Learning />
-            <Typography
-              variant="h4"
-              align="center"
-              color="textPrimary"
-              paragraph
-            >
-              {" "}
-              Have a stylish room baby
-            </Typography>
-            <Furniture />
-            <Typography
-              variant="h4"
-              align="center"
-              color="textPrimary"
-              paragraph
-            >
-              {" "}
-              Clothes for the bambinis
-            </Typography>
-            <Clothes />
-
-            <Typography
-              variant="h4"
-              align="center"
-              color="textPrimary"
-              paragraph
-            >
-              {" "}
-              Play and Have fun my love
-            </Typography>
-            <Toys />
-          </Container>
         </div>
+
+        <Container>
+          <ButtonBases />
+        </Container>
+        <Container className={classes.cardGrid} maxWidth="lg">
+          <Typography
+            variant="h4"
+            align="center"
+            color="textPrimary"
+            gutterBottom
+          >
+            {" "}
+            Because Learning Is Key
+          </Typography>
+          <Learning />
+          <Typography
+            variant="h4"
+            align="center"
+            color="textPrimary"
+            gutterBottom
+          >
+            {" "}
+            Stylish Room For Babies
+          </Typography>
+          <Furniture />
+          <Typography
+            variant="h4"
+            align="center"
+            color="textPrimary"
+            gutterBottom
+          >
+            {" "}
+            Because Fashion Is A Priority
+          </Typography>
+          <Clothes />
+
+          <Typography
+            variant="h4"
+            align="center"
+            color="textPrimary"
+            gutterBottom
+          >
+            {" "}
+            Play And Have Fun Bambino
+          </Typography>
+          <Toys />
+        </Container>
       </main>
       <Footer />
     </div>
