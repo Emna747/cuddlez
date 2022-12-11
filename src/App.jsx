@@ -3,12 +3,13 @@ import Clothes from "./Clothes";
 import Furniture from "./Furniture";
 import Learning from "./Learning";
 import Toys from "./Toys";
-
+import Footer from "./Footer";
 import ButtonBases from "./ButtonBases";
 import BedroomBabyIcon from "@mui/icons-material/BedroomBaby";
 import {
   Typography,
   AppBar,
+  Button,
   CssBaseline,
   Toolbar,
   Container,
@@ -21,10 +22,17 @@ function App() {
   return (
     <div>
       <CssBaseline />{" "}
-      <AppBar position="relative">
+      <AppBar position="fixed">
         <Toolbar>
-          <BedroomBabyIcon />
-          <Typography variant="h3">Cuddlez </Typography>
+          <BedroomBabyIcon className={classes.icontop} />
+          <Typography variant="h5">Cuddlez </Typography>
+          <Button
+            variant="contained"
+            size="medium"
+            className={classes.buttontop}
+          >
+            Check Cart
+          </Button>
         </Toolbar>
       </AppBar>
       <main>
@@ -47,10 +55,10 @@ function App() {
               Only Premium Products For Your Little Ones
             </Typography>{" "}
           </Container>
-          <Container>
+          <Container className={classes.container}>
             <ButtonBases />
           </Container>
-          <Container>
+          <Container className={classes.container}>
             <Typography
               variant="h4"
               align="center"
@@ -95,6 +103,7 @@ function App() {
           </Container>
         </div>
       </main>
+      <Footer />
     </div>
   );
 }

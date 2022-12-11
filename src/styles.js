@@ -5,27 +5,20 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.background.paper,
     padding: theme.spacing(8, 0, 10),
   },
-  navigationBar: {
-    marginRight: "47rem",
-  },
-  icon: {
-    marginRight: "20px",
-    color: "green",
-  },
-  icons: {
+
+  buttontop: {
     marginRight: "9px",
   },
-  button: {
-    marginLeft: "10px",
-    color: "#fafafa",
+  icontop: {
+    color: "red",
+    width: "10px",
   },
-  cardGrid: { padding: "28px 0", marginBottom: "5rem" },
   card: { height: "100%", display: "flex", flexDirection: "column" },
-  cardMedia: { paddingTop: "56.25%" },
+  cardGrid: { padding: "28px 0", marginBottom: "5rem" },
   cardContent: {
     flexGrow: "1",
-    textAlign: "center",
   },
+  cardMedia: { paddingTop: "56.25%" },
 
   footer: {
     backgroundColor: theme.palette.background.paper,
