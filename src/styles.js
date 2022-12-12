@@ -1,31 +1,30 @@
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles, createTheme } from "@material-ui/core/styles";
+const theme2 = createTheme({
+  palette: {
+    primary: { yellow: "#ffeb3b" },
+    secondary: { lightblue: "#33bfff" },
+  },
+});
 
 const useStyles = makeStyles((theme) => ({
   container: {
     backgroundColor: theme.palette.background.paper,
     padding: theme.spacing(8, 0, 10),
   },
-  thirdcontainer: {
-    border: "4px red solid",
-  },
-  secondcontainer: {
-    border: "4px green solid",
-  },
-  buttontop: {
-    marginRight: "9px",
-  },
+  navbar: { backgroundColor: "#ffeb3b" },
+  buttontop: { width: "10rem", backgroundColor: theme2.lightblue },
   icontop: {
-    color: "red",
-    width: "10px",
+    width: "24px",
+    color: "#f76b8a",
   },
   card: { height: "100%", display: "flex", flexDirection: "column" },
   cardGrid: {
-    padding: "8px 0",
+    padding: "20px 0",
     marginBottom: "5rem",
     border: "4px red solid",
   },
   cardContent: {
-    flexGrow: "1",
+    flexGrow: 1,
     textAlign: "center",
     border: "4px green solid",
   },

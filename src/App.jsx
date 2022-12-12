@@ -6,6 +6,7 @@ import Toys from "./Toys";
 import Footer from "./Footer";
 import ButtonBases from "./ButtonBases";
 import BedroomBabyIcon from "@mui/icons-material/BedroomBaby";
+import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import {
   Typography,
   AppBar,
@@ -22,7 +23,7 @@ function App() {
   return (
     <div>
       <CssBaseline />{" "}
-      <AppBar position="relative">
+      <AppBar position="fixed" className={classes.navbar}>
         <Toolbar>
           <BedroomBabyIcon className={classes.icontop} />
           <Typography variant="h5">Cuddlez </Typography>
@@ -31,7 +32,7 @@ function App() {
             size="medium"
             className={classes.buttontop}
           >
-            Check Cart
+            View Cart <ShoppingCartOutlinedIcon fontSize="sx" />
           </Button>
         </Toolbar>
       </AppBar>
@@ -60,7 +61,7 @@ function App() {
         <Container>
           <ButtonBases />
         </Container>
-        <Container className={classes.cardGrid} maxWidth="lg">
+        <div>
           <Typography
             variant="h4"
             align="center"
@@ -102,7 +103,7 @@ function App() {
             Play And Have Fun Bambino
           </Typography>
           <Toys />
-        </Container>
+        </div>
       </main>
       <Footer />
     </div>

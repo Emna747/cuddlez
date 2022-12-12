@@ -7,6 +7,7 @@ import {
   ButtonGroup,
   Card,
   Grid,
+  Container,
   CardContent,
   CardMedia,
 } from "@material-ui/core";
@@ -35,38 +36,42 @@ function Learning() {
   return (
     <div>
       <CssBaseline />{" "}
-      {database.map((card) => {
-        return (
-          <Grid container spacing={2}>
-            <Grid item key={card.id} xs={8} sm={6} md={4}>
-              <Card className={classes.card}>
-                {" "}
-                <CardContent className={classes.cardContent}>
-                  <CardMedia
-                    component="img"
-                    height="140"
-                    image="../photos/book1.jpeg"
-                    alt="its a book"
-                  />
-                  <Typography gutterBottom variant="h6">
-                    {" "}
-                    <h5 className={classes.producttitle}>{card.productName}</h5>
-                    <h6>
-                      Price {card.price} <EuroIcon fontSize="sx" />
-                    </h6>
-                  </Typography>
-                  <ButtonGroup variant="text" aria-label="text button group">
-                    <Button>Add to Cart</Button>
-                    <Button>
-                      Save <FavoriteTwoToneIcon color="success" />
-                    </Button>
-                  </ButtonGroup>
-                </CardContent>
-              </Card>
-            </Grid>
-          </Grid>
-        );
-      })}
+      <Container className={classes.cardGrid}>
+        <Grid container spacing={2}>
+          {database.map((card) => {
+            return (
+              <Grid item key={card.id} xs={12} md={4} sm={6}>
+                <Card className={classes.card}>
+                  {" "}
+                  <CardContent className={classes.cardContent}>
+                    <CardMedia
+                      component="img"
+                      height="140"
+                      image="../photos/book1.jpeg"
+                      alt="its a book"
+                    />
+                    <Typography gutterBottom variant="h6">
+                      {" "}
+                      <h5 className={classes.producttitle}>
+                        {card.productName}
+                      </h5>
+                      <h6>
+                        Price {card.price} <EuroIcon fontSize="sx" />
+                      </h6>
+                    </Typography>
+                    <ButtonGroup variant="text" aria-label="text button group">
+                      <Button>Add to Cart</Button>
+                      <Button>
+                        Save <FavoriteTwoToneIcon color="success" />
+                      </Button>
+                    </ButtonGroup>
+                  </CardContent>
+                </Card>
+              </Grid>
+            );
+          })}{" "}
+        </Grid>
+      </Container>
     </div>
   );
 }
