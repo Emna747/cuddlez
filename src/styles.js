@@ -1,18 +1,13 @@
-import { makeStyles, createTheme } from "@material-ui/core/styles";
-const theme2 = createTheme({
-  palette: {
-    primary: { yellow: "#ffeb3b" },
-    secondary: { lightblue: "#33bfff" },
-  },
-});
+import { makeStyles } from "@material-ui/core/styles";
+import { cyan, yellow } from "material-ui-colors";
 
 const useStyles = makeStyles((theme) => ({
   container: {
     backgroundColor: theme.palette.background.paper,
     padding: theme.spacing(8, 0, 10),
   },
-  navbar: { backgroundColor: "#ffeb3b" },
-  buttontop: { width: "10rem", backgroundColor: theme2.lightblue },
+  navbar: { backgroundColor: cyan[500] },
+  buttontop: { width: "10rem", backgroundColor: yellow[500] },
   icontop: {
     width: "24px",
     color: "#f76b8a",

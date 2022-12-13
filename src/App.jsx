@@ -7,23 +7,39 @@ import Footer from "./Footer";
 import ButtonBases from "./ButtonBases";
 import BedroomBabyIcon from "@mui/icons-material/BedroomBaby";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
-import {
-  Typography,
-  AppBar,
-  Button,
-  CssBaseline,
-  Toolbar,
-  Container,
-} from "@mui/material";
-
+import DarkModeTwoToneIcon from "@mui/icons-material/DarkModeTwoTone";
+import { Typography, AppBar, Button, Toolbar, Container } from "@mui/material";
+import CssBaseline from "@material-ui/core/CssBaseline";
+import { MuiThemeProvider, createTheme } from "@material-ui/core/styles";
 import useStyles from "./styles";
+
+const themeLight = createTheme({
+  palette: {
+    background: {
+      default: "#e4f0e2",
+    },
+  },
+});
+
+const themeDark = createTheme({
+  palette: {
+    background: {
+      default: "#222222",
+    },
+    text: {
+      primary: "#ffffff",
+    },
+  },
+});
 
 function App() {
   const classes = useStyles();
+  const [light, setLight] = React.useState(true);
   return (
     <div>
+      {" "}
       <CssBaseline />{" "}
-      <AppBar position="fixed" className={classes.navbar}>
+      <AppBar position="relative" className={classes.navbar}>
         <Toolbar>
           <BedroomBabyIcon className={classes.icontop} />
           <Typography variant="h5">Cuddlez </Typography>
@@ -34,6 +50,16 @@ function App() {
           >
             View Cart <ShoppingCartOutlinedIcon fontSize="sx" />
           </Button>
+          <MuiThemeProvider theme={light ? themeLight : themeDark}>
+            <Button
+              variant="contained"
+              size="medium"
+              className={classes.buttontop}
+              onClick={() => setLight((prev) => !prev)}
+            >
+              <DarkModeTwoToneIcon fontSize="medium" />
+            </Button>
+          </MuiThemeProvider>
         </Toolbar>
       </AppBar>
       <main>
