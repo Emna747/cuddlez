@@ -3,12 +3,19 @@ import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import ButtonBase from "@mui/material/ButtonBase";
 import Typography from "@mui/material/Typography";
-
+import Link from "@mui/material/Link";
+import Learning from "./Learning";
 const images = [
   {
     url: "https://images.pexels.com/photos/1741230/pexels-photo-1741230.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     title: "Learn",
     width: "25%",
+    render: (
+      <Link>
+        {" "}
+        <Learning />{" "}
+      </Link>
+    ),
   },
   {
     url: "https://images.pexels.com/photos/272056/pexels-photo-272056.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",

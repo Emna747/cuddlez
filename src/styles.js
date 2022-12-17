@@ -7,7 +7,12 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(8, 0, 10),
   },
   navbar: { backgroundColor: cyan[500] },
-  buttontop: { width: "10rem", backgroundColor: yellow[500] },
+
+  buttontop: {
+    backgroundColor: yellow[500],
+    width: "8rem",
+    marginLeft: "10px",
+  },
   icontop: {
     width: "24px",
     color: "#f76b8a",
