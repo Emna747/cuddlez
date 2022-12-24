@@ -1,18 +1,19 @@
 import React from "react";
 
-import {
-  Typography,
-  AppBar,
-  CssBaseline,
-  Toolbar,
-  Button,
-  Container,
-} from "@material-ui/core";
+import { AppBar } from "@material-ui/core";
 
 import useStyles from "./styles";
 function Checkout() {
   const classes = useStyles();
-  return <div> </div>;
+  return (
+    <div>
+      {" "}
+      <AppBar position="relative" className={classes.navbar}>
+        {" "}
+      </AppBar>
+      <p>lorem ipsum text</p>
+    </div>
+  );
 }
 
 export default Checkout;
