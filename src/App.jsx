@@ -4,50 +4,22 @@ import Furniture from "./Furniture";
 import Learning from "./Learning";
 import Toys from "./Toys";
 import Footer from "./Footer";
-import Signuppage from "./Signuppage";
+//import Signuppage from "./Signuppage";
 import ButtonBases from "./ButtonBases";
-import Checkout from "./Checkout";
+//import Checkout from "./Checkout";
 import useStyles from "./styles";
 import BedroomBabyIcon from "@mui/icons-material/BedroomBaby";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import DarkModeTwoToneIcon from "@mui/icons-material/DarkModeTwoTone";
 import { Typography, AppBar, Button, Toolbar, Container } from "@mui/material";
 import CssBaseline from "@material-ui/core/CssBaseline";
-import { MuiThemeProvider, createTheme } from "@material-ui/core/styles";
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
-
-const themeLight = createTheme({
-  palette: {
-    background: {
-      default: "#e4f0e2",
-    },
-  },
-});
-
-const themeDark = createTheme({
-  palette: {
-    background: {
-      default: "#222222",
-    },
-    text: {
-      primary: "#ffffff",
-    },
-  },
-});
 
 function App() {
   const classes = useStyles();
-  const [light, setLight] = React.useState(true);
   return (
     <div>
       <CssBaseline />{" "}
       <AppBar position="relative" className={classes.navbar}>
-        <Router>
-          <Routes>
-            <Route path="/checkout" element={<Checkout />} />
-            <Route path="/useraccount" element={<Signuppage />} />
-          </Routes>
-        </Router>{" "}
         <Toolbar>
           <BedroomBabyIcon className={classes.icontop} />
           <Typography variant="h5">Cuddlez </Typography>
@@ -56,7 +28,7 @@ function App() {
             size="medium"
             className={classes.buttontop}
           >
-            <Link href="/checkout"> View Cart </Link>
+            View Cart
             <ShoppingCartOutlinedIcon fontSize="sx" />
           </Button>
           <Button
@@ -64,19 +36,17 @@ function App() {
             size="medium"
             className={classes.buttontop}
           >
-            <Link href="/useraccount"> Sign Up </Link>
+            Sign Up
             <ShoppingCartOutlinedIcon fontSize="sx" />
           </Button>
-          <MuiThemeProvider theme={light ? themeLight : themeDark}>
-            <Button
-              variant="contained"
-              size="medium"
-              className={classes.buttontop}
-              onClick={() => setLight((prev) => !prev)}
-            >
-              <DarkModeTwoToneIcon fontSize="medium" />
-            </Button>
-          </MuiThemeProvider>
+
+          <Button
+            variant="contained"
+            size="medium"
+            className={classes.buttontop}
+          >
+            <DarkModeTwoToneIcon fontSize="medium" />
+          </Button>
         </Toolbar>
       </AppBar>
       <main>

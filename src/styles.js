@@ -1,18 +1,19 @@
 import { makeStyles } from "@material-ui/core/styles";
-import { cyan, yellow } from "material-ui-colors";
+// eslint-disable-next-line
+import { pink, amber, cyan, yellow } from "material-ui-colors";
 
 const useStyles = makeStyles((theme) => ({
   container: {
-    backgroundColor: theme.palette.background.paper,
     padding: theme.spacing(8, 0, 10),
   },
-  navbar: { backgroundColor: cyan[500] },
-
+  navbar: { backgroundColor: amber[500] },
   buttontop: {
-    backgroundColor: yellow[500],
+    backgroundColor: pink[300],
     width: "8rem",
-    marginLeft: "10px",
+    marginLeft: "5px",
+    "&:hover": { backgroundColor: pink[100] },
   },
+
   icontop: {
     width: "24px",
     color: "#f76b8a",
