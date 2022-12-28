@@ -20,7 +20,7 @@ function App() {
     <div>
       <CssBaseline />{" "}
       <AppBar position="relative" className={classes.navbar}>
-        <Toolbar>
+        <Toolbar className={classes.navigationBar}>
           <BedroomBabyIcon className={classes.icontop} />
           <Typography variant="h4" className={classes.navigationBar}>
             Cuddlez{" "}

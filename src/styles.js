@@ -10,23 +10,24 @@ const useStyles = makeStyles((theme) => ({
   },
   navbar: { backgroundColor: cyan[600] },
   navigationBar: {
-    marginRight: "42rem",
+    marginRight: "46rem",
   },
   buttonone: {
-    backgroundColor: pink[400],
-    width: "6rem",
+    backgroundColor: pink[800],
+    width: "8rem",
     marginLeft: "5px",
-    "&:hover": { backgroundColor: pink[800] },
+
+    "&:hover": { backgroundColor: pink[500] },
   },
   buttontwo: {
     backgroundColor: pink[400],
-    width: "6rem",
+    width: "8rem",
     marginLeft: "5px",
     "&:hover": { backgroundColor: pink[800] },
   },
   buttonthree: {
     backgroundColor: yellow[400],
-    width: "3rem",
+    width: "2rem",
     marginLeft: "5px",
     "&:hover": { backgroundColor: amber[500] },
   },
