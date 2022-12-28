@@ -56,43 +56,43 @@ function NavBar() {
       {" "}
       <AppBar position="relative" className={classes.navbar}>
         <Toolbar className={classes.navigationBar}>
-          <BedroomBabyIcon className={classes.icontop} />
-          <Typography variant="h4" className={classes.navigationBar}>
+          <BedroomBabyIcon
+            sx={{ display: { xs: "block", sm: "none" } }}
+            className={classes.icontop}
+          />
+          <Typography
+            variant="h4"
+            sx={{ display: { xs: "none", sm: "block" } }}
+            className={classes.navigationBar}
+          >
             Cuddlez{" "}
           </Typography>
-          <Search>
-            <SearchIconWrapper>
-              <SearchIcon />
-            </SearchIconWrapper>
-            <StyledInputBase
-              placeholder="Search…"
-              inputProps={{ "aria-label": "search" }}
-            />
-          </Search>
-          <Button
-            variant="contained"
-            size="medium"
-            startIcon={<ShoppingCartOutlinedIcon fontSize="sx" />}
-            className={classes.buttonone}
-          >
-            Cart
-          </Button>
-          <search></search>
-          <Button
-            variant="contained"
-            size="medium"
-            className={classes.buttontwo}
-          >
-            Newsletter
-          </Button>
+          <div className={classes.sectiontwo}>
+            <Search>
+              <SearchIconWrapper>
+                <SearchIcon />
+              </SearchIconWrapper>
+              <StyledInputBase
+                placeholder="Search…"
+                inputProps={{ "aria-label": "search" }}
+              />
+            </Search>
 
-          <Button
-            variant="contained"
-            size="medium"
-            className={classes.buttonthree}
-          >
-            <DarkModeTwoToneIcon fontSize="medium" />
-          </Button>
+            <search></search>
+            <Button variant="contained" className={classes.buttontwo}>
+              Newsletter
+            </Button>
+            <Button
+              variant="contained"
+              startIcon={<ShoppingCartOutlinedIcon fontSize="sx" />}
+              className={classes.buttonone}
+            >
+              Cart
+            </Button>
+            <Button variant="contained" className={classes.buttonthree}>
+              <DarkModeTwoToneIcon fontSize="medium" />
+            </Button>
+          </div>
         </Toolbar>
       </AppBar>{" "}
     </div>

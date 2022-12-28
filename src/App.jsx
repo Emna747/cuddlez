@@ -7,7 +7,7 @@ import Footer from "./Footer";
 //import Signuppage from "./Signuppage";
 import ButtonBases from "./ButtonBases";
 //import Checkout from "./Checkout";
-import useStyles from "./styles";
+
 import NavBar from "./NavBar";
 import MainBanner from "./MainBanner";
 import { Typography, Container } from "@mui/material";
@@ -15,8 +15,6 @@ import { Typography, Container } from "@mui/material";
 import CssBaseline from "@material-ui/core/CssBaseline";
 
 function App() {
-  const classes = useStyles();
-
   return (
     <div>
       <CssBaseline /> <NavBar />
@@ -31,7 +29,6 @@ function App() {
             align="center"
             color="textPrimary"
             gutterBottom
-            className={classes.descriptionText}
           >
             {" "}
             Because Learning Is Key
@@ -42,7 +39,6 @@ function App() {
             align="center"
             color="textPrimary"
             gutterBottom
-            className={classes.descriptionText}
           >
             {" "}
             Stylish Room For Babies
@@ -53,7 +49,6 @@ function App() {
             align="center"
             color="textPrimary"
             gutterBottom
-            className={classes.descriptionText}
           >
             {" "}
             Because Fashion Is A Priority
@@ -65,7 +60,6 @@ function App() {
             align="center"
             color="textPrimary"
             gutterBottom
-            className={classes.descriptionText}
           >
             {" "}
             Play And Have Fun Bambino

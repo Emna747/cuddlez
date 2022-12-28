@@ -1,5 +1,4 @@
 import { makeStyles } from "@material-ui/core/styles";
-// eslint-disable-next-line
 import { pink, amber, cyan, yellow } from "material-ui-colors";
 
 const useStyles = makeStyles((theme) => ({
@@ -9,11 +8,16 @@ const useStyles = makeStyles((theme) => ({
   },
   navbar: { backgroundColor: cyan[600] },
   navigationBar: {
-    marginRight: "42rem",
+    display: "flex",
+    justifyContent: "flex-start",
+  },
+  sectiontwo: {
+    display: "flex",
+    justifyContent: "flex-end",
   },
   buttonone: {
     backgroundColor: pink[800],
-    width: "8rem",
+    width: "6rem",
     marginLeft: "5px",
 
     "&:hover": { backgroundColor: pink[500] },
@@ -26,14 +30,14 @@ const useStyles = makeStyles((theme) => ({
   },
   buttonthree: {
     backgroundColor: yellow[400],
-    width: "2rem",
+    width: "4rem",
     marginLeft: "5px",
-    "&:hover": { backgroundColor: amber[500] },
+    "&:hover": { backgroundColor: amber[400] },
   },
-  descriptionText: { color: "#f76b8a" },
+
   icontop: {
-    width: "24px",
-    color: "#f76b8a",
+    fontSize: "medium",
+    color: amber[500],
   },
   card: { height: "100%", display: "flex", flexDirection: "column" },
   cardGrid: {
