@@ -5,12 +5,11 @@ import { pink, amber, cyan, yellow } from "material-ui-colors";
 const useStyles = makeStyles((theme) => ({
   container: {
     backgroundColor: theme.palette.background.paper,
-
     padding: theme.spacing(8, 0, 10),
   },
   navbar: { backgroundColor: cyan[600] },
   navigationBar: {
-    marginRight: "46rem",
+    marginRight: "42rem",
   },
   buttonone: {
     backgroundColor: pink[800],
@@ -31,6 +30,7 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: "5px",
     "&:hover": { backgroundColor: amber[500] },
   },
+  descriptionText: { color: "#f76b8a" },
   icontop: {
     width: "24px",
     color: "#f76b8a",

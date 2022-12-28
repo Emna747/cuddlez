@@ -8,70 +8,20 @@ import Footer from "./Footer";
 import ButtonBases from "./ButtonBases";
 //import Checkout from "./Checkout";
 import useStyles from "./styles";
-import BedroomBabyIcon from "@mui/icons-material/BedroomBaby";
-import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
-import DarkModeTwoToneIcon from "@mui/icons-material/DarkModeTwoTone";
-import { Typography, AppBar, Button, Toolbar, Container } from "@mui/material";
+import NavBar from "./NavBar";
+import MainBanner from "./MainBanner";
+import { Typography, Container } from "@mui/material";
+
 import CssBaseline from "@material-ui/core/CssBaseline";
 
 function App() {
   const classes = useStyles();
+
   return (
     <div>
-      <CssBaseline />{" "}
-      <AppBar position="relative" className={classes.navbar}>
-        <Toolbar className={classes.navigationBar}>
-          <BedroomBabyIcon className={classes.icontop} />
-          <Typography variant="h4" className={classes.navigationBar}>
-            Cuddlez{" "}
-          </Typography>
-          <Button
-            variant="contained"
-            size="medium"
-            startIcon={<ShoppingCartOutlinedIcon fontSize="sx" />}
-            className={classes.buttonone}
-          >
-            View Cart
-          </Button>
-          <Button
-            variant="contained"
-            size="medium"
-            className={classes.buttontwo}
-          >
-            Sign Up
-          </Button>
-
-          <Button
-            variant="contained"
-            size="medium"
-            className={classes.buttonthree}
-          >
-            <DarkModeTwoToneIcon fontSize="medium" />
-          </Button>
-        </Toolbar>
-      </AppBar>
+      <CssBaseline /> <NavBar />
       <main>
-        <div className={classes.container}>
-          <Container maxWidth="lg">
-            <Typography
-              variant="h1"
-              align="center"
-              color="textPrimary"
-              gutterBottom
-            >
-              Cuddlez Store
-            </Typography>
-            <Typography
-              variant="h5"
-              align="center"
-              color="textSecondary"
-              paragraph
-            >
-              Only Premium Products For Your Little Ones
-            </Typography>{" "}
-          </Container>
-        </div>
-
+        <MainBanner />
         <Container>
           <ButtonBases />
         </Container>
@@ -81,6 +31,7 @@ function App() {
             align="center"
             color="textPrimary"
             gutterBottom
+            className={classes.descriptionText}
           >
             {" "}
             Because Learning Is Key
@@ -91,6 +42,7 @@ function App() {
             align="center"
             color="textPrimary"
             gutterBottom
+            className={classes.descriptionText}
           >
             {" "}
             Stylish Room For Babies
@@ -101,6 +53,7 @@ function App() {
             align="center"
             color="textPrimary"
             gutterBottom
+            className={classes.descriptionText}
           >
             {" "}
             Because Fashion Is A Priority
@@ -112,6 +65,7 @@ function App() {
             align="center"
             color="textPrimary"
             gutterBottom
+            className={classes.descriptionText}
           >
             {" "}
             Play And Have Fun Bambino
