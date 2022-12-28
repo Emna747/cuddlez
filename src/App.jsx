@@ -22,28 +22,29 @@ function App() {
       <AppBar position="relative" className={classes.navbar}>
         <Toolbar>
           <BedroomBabyIcon className={classes.icontop} />
-          <Typography variant="h5">Cuddlez </Typography>
+          <Typography variant="h4" className={classes.navigationBar}>
+            Cuddlez{" "}
+          </Typography>
           <Button
             variant="contained"
             size="medium"
-            className={classes.buttontop}
+            startIcon={<ShoppingCartOutlinedIcon fontSize="sx" />}
+            className={classes.buttonone}
           >
             View Cart
-            <ShoppingCartOutlinedIcon fontSize="sx" />
           </Button>
           <Button
             variant="contained"
             size="medium"
-            className={classes.buttontop}
+            className={classes.buttontwo}
           >
             Sign Up
-            <ShoppingCartOutlinedIcon fontSize="sx" />
           </Button>
 
           <Button
             variant="contained"
             size="medium"
-            className={classes.buttontop}
+            className={classes.buttonthree}
           >
             <DarkModeTwoToneIcon fontSize="medium" />
           </Button>
