@@ -27,17 +27,19 @@ const useStyles = makeStyles((theme) => ({
 
     "&:hover": { backgroundColor: pink[500] },
   },
+
+  subjecttitle: { color: pink[700], paddingTop: "5rem" },
   buttontwo: {
-    backgroundColor: pink[400],
+    backgroundColor: pink[800],
     width: "8rem",
     marginLeft: "5px",
-    "&:hover": { backgroundColor: pink[800] },
+    "&:hover": { backgroundColor: pink[500] },
   },
   buttonthree: {
-    backgroundColor: yellow[400],
+    backgroundColor: amber[400],
     width: "4rem",
     marginLeft: "5px",
-    "&:hover": { backgroundColor: amber[400] },
+    "&:hover": { backgroundColor: yellow[400] },
   },
 
   icontop: {

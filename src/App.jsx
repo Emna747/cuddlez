@@ -7,14 +7,18 @@ import Footer from "./Footer";
 //import Signuppage from "./Signuppage";
 import ButtonBases from "./ButtonBases";
 //import Checkout from "./Checkout";
-
+import SmartToyOutlinedIcon from "@mui/icons-material/SmartToyOutlined";
+import AbcOutlinedIcon from "@mui/icons-material/AbcOutlined";
+import DiamondOutlinedIcon from "@mui/icons-material/DiamondOutlined";
+import ChairOutlinedIcon from "@mui/icons-material/ChairOutlined";
 import NavBar from "./NavBar";
 import MainBanner from "./MainBanner";
 import { Typography, Container } from "@mui/material";
-
+import useStyles from "./styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 
 function App() {
+  const classes = useStyles();
   return (
     <div>
       <CssBaseline /> <NavBar />
@@ -29,9 +33,10 @@ function App() {
             align="center"
             color="textPrimary"
             gutterBottom
+            className={classes.subjecttitle}
           >
             {" "}
-            Because Learning Is Key
+            Education <AbcOutlinedIcon />
           </Typography>
           <Learning />
           <Typography
@@ -39,9 +44,10 @@ function App() {
             align="center"
             color="textPrimary"
             gutterBottom
+            className={classes.subjecttitle}
           >
             {" "}
-            Stylish Room For Babies
+            Decoration & Design <ChairOutlinedIcon />
           </Typography>
           <Furniture />
           <Typography
@@ -49,9 +55,10 @@ function App() {
             align="center"
             color="textPrimary"
             gutterBottom
+            className={classes.subjecttitle}
           >
             {" "}
-            Because Fashion Is A Priority
+            Fashion & Style <DiamondOutlinedIcon />
           </Typography>
           <Clothes />
 
@@ -60,9 +67,10 @@ function App() {
             align="center"
             color="textPrimary"
             gutterBottom
+            className={classes.subjecttitle}
           >
             {" "}
-            Play And Have Fun Bambino
+            Fun & Games <SmartToyOutlinedIcon />
           </Typography>
           <Toys />
         </div>

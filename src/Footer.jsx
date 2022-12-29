@@ -14,9 +14,15 @@ function Footer() {
           {" "}
           Follow Us On Social Media For More Updates <br />{" "}
           <FacebookIcon color="action" />
-          <InstagramIcon color="action" /> <LinkedInIcon color="action" />
+          <InstagramIcon color="action" />
+          <LinkedInIcon color="action" />
         </Typography>
-        <Typography variant="subtitle2" align="center" color="textSecondary">
+        <Typography
+          variant="subtitle2"
+          align="center"
+          color="textSecondary"
+          gutterBottom
+        >
           {" "}
           Made with Love by Emna in 2022
         </Typography>
