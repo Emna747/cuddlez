@@ -6,10 +6,15 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.background.paper,
     padding: theme.spacing(8, 0, 10),
   },
-  navbar: { backgroundColor: cyan[600] },
+
   navigationBar: {
+    backgroundColor: cyan[600],
+
     display: "flex",
-    justifyContent: "flex-start",
+    justifyContent: "space-between",
+  },
+  sectionone: {
+    display: "flex",
   },
   sectiontwo: {
     display: "flex",

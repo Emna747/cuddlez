@@ -54,19 +54,22 @@ function NavBar() {
   return (
     <div>
       {" "}
-      <AppBar position="relative" className={classes.navbar}>
+      <AppBar position="relative">
         <Toolbar className={classes.navigationBar}>
-          <BedroomBabyIcon
-            sx={{ display: { xs: "block", sm: "none" } }}
-            className={classes.icontop}
-          />
-          <Typography
-            variant="h4"
-            sx={{ display: { xs: "none", sm: "block" } }}
-            className={classes.navigationBar}
-          >
-            Cuddlez{" "}
-          </Typography>
+          <div className={classes.sectionone}>
+            {" "}
+            <BedroomBabyIcon
+              sx={{ display: { xs: "block", sm: "none" } }}
+              className={classes.icontop}
+            />
+            <Typography
+              variant="h4"
+              sx={{ display: { xs: "none", sm: "block" } }}
+            >
+              Cuddlez{" "}
+            </Typography>{" "}
+          </div>
+
           <div className={classes.sectiontwo}>
             <Search>
               <SearchIconWrapper>
