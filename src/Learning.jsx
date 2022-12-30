@@ -9,27 +9,101 @@ import {
   Grid,
   Container,
   CardContent,
-  CardMedia,
 } from "@material-ui/core";
 import FavoriteTwoToneIcon from "@mui/icons-material/FavoriteTwoTone";
 import EuroIcon from "@mui/icons-material/Euro";
 import useStyles from "./styles";
 const database = [
-  { id: "1010", productName: "Fruits and Vegetables Book", price: 6.99 },
-  { id: "1011", productName: "Fun with Numbers and Shapes", price: 9.99 },
-  { id: "1012", productName: "Coloring Book ", price: 7.89 },
-  { id: "1013", productName: "Toddler Coloring Book", price: 7.89 },
-  { id: "1014", productName: "Easy Coloring Book", price: 7.89 },
-  { id: "1015", productName: "Rescue at Lake Wild Book", price: 9.99 },
-  { id: "1016", productName: "Charlotte's Web", price: 10.99 },
-  { id: "1017", productName: "My Quiet Imagination", price: 8.99 },
-  { id: "1018", productName: "The Voyage to Magical North", price: 13.99 },
-  { id: "1019", productName: "Peter Pan", price: 10.99 },
-  { id: "1020", productName: "Skycircus", price: 5.89 },
-  { id: "1021", productName: "Susie Won't Back Down", price: 16.99 },
-  { id: "1022", productName: "Red Riding Hood", price: 9.99 },
-  { id: "1023", productName: "Alphabet Book", price: 13.89 },
-  { id: "1024", productName: "Having A Friend", price: 8.99 },
+  {
+    id: "1010",
+    productName: "Fruits and Vegetables Book",
+    price: 6.99,
+    key: require("./photos/book1.jpeg").default,
+  },
+  {
+    id: "1011",
+    productName: "Fun with Numbers and Shapes",
+    price: 9.99,
+    key: require("./photos/book2.jpeg").default,
+  },
+  {
+    id: "1012",
+    productName: "Coloring Book ",
+    price: 7.89,
+    key: require("./photos/book3.jpeg").default,
+  },
+  {
+    id: "1013",
+    productName: "Toddler Coloring Book",
+    price: 7.89,
+    key: require("./photos/book4.jpeg").default,
+  },
+  {
+    id: "1014",
+    productName: "Easy Coloring Book",
+    price: 7.89,
+    key: require("./photos/book5.jpeg").default,
+  },
+  {
+    id: "1015",
+    productName: "Rescue at Lake Wild Book",
+    price: 9.99,
+    key: require("./photos/book6.png").default,
+  },
+  {
+    id: "1016",
+    productName: "Charlotte's Web",
+    price: 10.99,
+    key: require("./photos/book7.jpeg").default,
+  },
+  {
+    id: "1017",
+    productName: "My Quiet Imagination",
+    price: 8.99,
+    key: require("./photos/book8.jpeg").default,
+  },
+  {
+    id: "1018",
+    productName: "The Voyage to Magical North",
+    price: 13.99,
+    key: require("./photos/book9.jpeg").default,
+  },
+  {
+    id: "1019",
+    productName: "Peter Pan",
+    price: 10.99,
+    key: require("./photos/book10.png").default,
+  },
+  {
+    id: "1020",
+    productName: "Skycircus",
+    price: 5.89,
+    key: require("./photos/book11.jpeg").default,
+  },
+  {
+    id: "1021",
+    productName: "Susie Won't Back Down",
+    price: 16.99,
+    key: require("./photos/book12.jpeg").default,
+  },
+  {
+    id: "1022",
+    productName: "Red Riding Hood",
+    price: 9.99,
+    key: require("./photos/book13.jpeg").default,
+  },
+  {
+    id: "1023",
+    productName: "Alphabet Book",
+    price: 13.89,
+    key: require("./photos/book14.jpeg").default,
+  },
+  {
+    id: "1024",
+    productName: "Having A Friend",
+    price: 8.99,
+    key: require("./photos/book15.jpeg").default,
+  },
 ];
 function Learning() {
   const classes = useStyles();
@@ -44,12 +118,7 @@ function Learning() {
                 <Card className={classes.card}>
                   {" "}
                   <CardContent className={classes.cardContent}>
-                    <CardMedia
-                      component="img"
-                      height="140"
-                      image="../photos/book1.jpeg"
-                      alt="its a book"
-                    />
+                    <img src={card.key} height="140" alt="" />
                     <Typography gutterBottom variant="h6">
                       {" "}
                       <h5 className={classes.producttitle}>
