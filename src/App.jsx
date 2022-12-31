@@ -16,7 +16,7 @@ import MainBanner from "./MainBanner";
 import { Typography, Container } from "@mui/material";
 import useStyles from "./styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
-
+import Checkout from "./Checkout";
 function App() {
   const classes = useStyles();
   return (

@@ -118,7 +118,7 @@ function Toys() {
                 <Card className={classes.card}>
                   {" "}
                   <CardContent className={classes.cardContent}>
-                    <img src={card.key} height="140" alt="" />
+                    <img src={card.key} className={classes.theimage} alt="" />
                     <Typography gutterBottom variant="h6">
                       {" "}
                       <h5 className={classes.producttitle}>
